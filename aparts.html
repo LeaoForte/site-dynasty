@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interiores dos Apartamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #183c32;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2c5c4d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra header */
+        }
+
+        header a {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* imagem pontas redondas */
+        }
+
+        header h1 {
+            color: #fff; /* Cor do texto */
+            margin-top: 10px;
+        }
+
+        .topbar {
+            background-color: #183c32; 
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .topbar a {
+            display: inline-block;
+            color: #fff; /* Cor do texto */
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease; 
+        }
+
+        .topbar a:hover {
+            color: #ffcc00; 
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #397d66; 
+            margin-top: 20px;
+        }
+
+        section {
+            margin: 20px;
+        text-align: center; /* texto no meio */
+        }
+
+        section h1, section h2 {
+            color: #ffcc00; /* Cor títulos do h2 */
+        }
+
+        section ul,
+        section p {
+            color: #fff; /* Cor do texto */
+            text-align: center; /* meio texto */
+        }
+
+        .photo-container {
+            text-align: center;
+            display: flex;
+            justify-content: center; /* meio imagens */
+        }
+
+        .photo-container img {
+            width: 45%; /* Largura fotos */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra à imagem */
+            border-radius: 8px; /* redonda imagem */
+            margin: 0 1%; /*margem entre as fotos */
+        }
+
+        footer {
+            background-color: #2c5c4d;
+            color: #fff; 
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto; /* Empurra o rodapé baixo */
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        
+       .tipologia {
+            background-color: #2c5c4d; 
+            color: #fff; 
+            padding: 5px; 
+            border-radius: 4px; /* redonda caixa de texto */
+            display: inline-block; /* caixa de texto do tamanho do texto */
+            margin-top: 5px;
+        }
+
+        #topBtn {
+        display: none;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 16px;
+        border: none;
+        outline: none;
+        background-color: #ffcc00;
+        color: green;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        }
+
+    
+.show-list {
+    display: block;
+}
+    
+    
+    .dropdown-btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    }
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    width: 100%; /* largura total */
+}
+    
+    .dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    }
+    
+    .dropdown-content button:hover {
+    background-color: #ddd;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="fotos_e_cenas/dynasty8.png" alt="Logotipo Empresa">
+        </a>
+        <h1>Interiores dos Apartamentos</h1>
+    </header>
+
+    <div class="topbar">
+        <a href="index.html">Início</a>
+        <a href="normas.html">Normas</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="lista.html">Imóveis</a>
+        <a href="orcamento.html">Orçamentos</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="login.html">Login</a>
+    </div>
+    
+<section id="apar1">
+        <h2>Apartamento 1:</h2>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar1.png" alt="Apartamento 1 0">
+            <img class="photo" src="fotos_e_cenas/apar1-1.png" alt="Apartamento 1 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar1-2.png" alt="Apartamento 1 2">
+            <img class="photo" src="fotos_e_cenas/apar1-3.png" alt="Apartamento 1 3">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar1-4.png" alt="Apartamento 1 4">
+            <img class="photo" src="fotos_e_cenas/apar1-5.png" alt="Apartamento 1 5">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar1-6.png" alt="Apartamento 1 6">
+        </div>
+        
+        <div class="tipologia">
+            <p>T2 | 3 Andar | Não Mobilado | Grande Dimensão</p>
+        </div>
+        
+    </section>
+
+<section id="apar2">
+        <h1>Apartamento 2:</h1>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar2.png" alt="Apartamento 2 0">
+            <img class="photo" src="fotos_e_cenas/apar2-1.png" alt="Apartamento 2 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar2-2.png" alt="Apartamento 2 2">
+            <img class="photo" src="fotos_e_cenas/apar2-3.png" alt="Apartamento 2 3">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar2-4.png" alt="Apartamento 2 4">
+            <img class="photo" src="fotos_e_cenas/apar2-5.png" alt="Apartamento 2 5">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar2-6.png" alt="Apartamento 2 6">
+        </div>
+        <div class="tipologia">
+            <p>T2 | 3 Andar | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar3">
+        <h1>Apartamento 3:</h1>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar3.png" alt="Apartamento 3 0">
+            <img class="photo" src="fotos_e_cenas/apar3-1.png" alt="Apartamento 3 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar3-2.png" alt="Apartamento 3 2">
+            <img class="photo" src="fotos_e_cenas/apar3-3.png" alt="Apartamento 3 3">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar3-4.png" alt="Apartamento 3 4">
+            <img class="photo" src="fotos_e_cenas/apar3-5.png" alt="Apartamento 3 5">
+        </div>
+
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar3-6.png" alt="Apartamento 3 6">
+            <img class="photo" src="fotos_e_cenas/apar3-7.png" alt="Apartamento 3 7">
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar4">
+        <h1>Apartamento 4:</h1>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar4.png" alt="Apartamento 4 0">
+            <img class="photo" src="fotos_e_cenas/apar4-1.png" alt="Apartamento 4 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar4-2.png" alt="Apartamento 4 2">
+            <img class="photo" src="fotos_e_cenas/apar4-3.png" alt="Apartamento 4 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar4-4.png" alt="Apartamento 4 4">
+            <img class="photo" src="fotos_e_cenas/apar4-5.png" alt="Apartamento 4 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar4-6.png" alt="Apartamento 4 6">
+            <img class="photo" src="fotos_e_cenas/apar4-7.png" alt="Apartamento 4 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar4-8.png" alt="Apartamento 4 8">
+        </div>
+
+        <div class="tipologia">
+            <p>T1 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+
+<section id="apar5">
+        <h1>Apartamento 5:</h1>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar5.png" alt="Apartamento 5 0">
+            <img class="photo" src="fotos_e_cenas/apar5-1.png" alt="Apartamento 5 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar5-2.png" alt="Apartamento 5 2">
+            <img class="photo" src="fotos_e_cenas/apar5-3.png" alt="Apartamento 5 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar5-4.png" alt="Apartamento 5 4">
+            <img class="photo" src="fotos_e_cenas/apar5-5.png" alt="Apartamento 5 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar5-6.png" alt="Apartamento 5 6">
+            <img class="photo" src="fotos_e_cenas/apar5-7.png" alt="Apartamento 5 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar5-8.png" alt="Apartamento 5 8">
+            <img class="photo" src="fotos_e_cenas/apar5-9.png" alt="Apartamento 5 9">
+        </div>
+
+        <div class="tipologia">
+            <p>T1 | 2 Andares | Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar6">
+        <h1>Apartamento 6:</h1>
+
+    <div class="photo-container">
+        <img class="photo" src="fotos_e_cenas/apar6.png" alt="Apartamento 6 0">
+        <img class="photo" src="fotos_e_cenas/apar6-1.png" alt="Apartamento 6 1">
+    </div>
+    
+    <div class="photo-container">
+        <img class="photo" src="fotos_e_cenas/apar6-2.png" alt="Apartamento 6 2">
+        <img class="photo" src="fotos_e_cenas/apar6-3.png" alt="Apartamento 6 3">
+    </div>
+    
+    <div class="photo-container">
+        <img class="photo" src="fotos_e_cenas/apar6-4.png" alt="Apartamento 6 4">
+        <img class="photo" src="fotos_e_cenas/apar6-5.png" alt="Apartamento 6 5">
+    </div>
+    <div class="photo-container">
+        <img class="photo" src="fotos_e_cenas/apar6-6.png" alt="Apartamento 6 6">
+        <img class="photo" src="fotos_e_cenas/apar6-7.png" alt="Apartamento 6 7">
+    </div>
+
+        <div class="tipologia">
+            <p>T2 | 1 Andar | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar7">
+        <h1>Apartamento 7:</h1>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar7.png" alt="Apartamento 7 0">
+            <img class="photo" src="fotos_e_cenas/apar7-1.png" alt="Apartamento 7 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar7-2.png" alt="Apartamento 7 2">
+            <img class="photo" src="fotos_e_cenas/apar7-3.png" alt="Apartamento 7 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar7-4.png" alt="Apartamento 7 4">
+            <img class="photo" src="fotos_e_cenas/apar7-5.png" alt="Apartamento 7 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar7-6.png" alt="Apartamento 7 6">
+            <img class="photo" src="fotos_e_cenas/apar7-7.png" alt="Apartamento 7 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar7-8.png" alt="Apartamento 7 8">
+            <img class="photo" src="fotos_e_cenas/apar7-9.png" alt="Apartamento 7 9">
+        </div>
+        <div class="tipologia">
+            <p>T1 | 2 Andares | Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+
+    <section id="apar8">
+        <h1>Apartamento 8:</h1>
+    
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar8.png" alt="Apartamento 8 0">
+            <img class="photo" src="fotos_e_cenas/apar8-1.png" alt="Apartamento 8 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar8-2.png" alt="Apartamento 8 2">
+            <img class="photo" src="fotos_e_cenas/apar8-3.png" alt="Apartamento 8 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar8-4.png" alt="Apartamento 8 4">
+            <img class="photo" src="fotos_e_cenas/apar8-5.png" alt="Apartamento 8 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar8-6.png" alt="Apartamento 8 6">
+            <img class="photo" src="fotos_e_cenas/apar8-7.png" alt="Apartamento 8 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar8-8.png" alt="Apartamento 8 8">
+            <img class="photo" src="fotos_e_cenas/apar8-9.png" alt="Apartamento 8 9">
+        </div>
+    
+        <div class="tipologia">
+            <p>T1 | 2 Andares | Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar9">
+        <h1>Apartamento 9:</h1>
+    
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9.png" alt="Apartamento 9 0">
+            <img class="photo" src="fotos_e_cenas/apar9-1.png" alt="Apartamento 9 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9-2.png" alt="Apartamento 9 2">
+            <img class="photo" src="fotos_e_cenas/apar9-3.png" alt="Apartamento 9 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9-4.png" alt="Apartamento 9 4">
+            <img class="photo" src="fotos_e_cenas/apar9-5.png" alt="Apartamento 9 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9-6.png" alt="Apartamento 9 6">
+            <img class="photo" src="fotos_e_cenas/apar9-7.png" alt="Apartamento 9 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9-8.png" alt="Apartamento 9 8">
+            <img class="photo" src="fotos_e_cenas/apar9-9.png" alt="Apartamento 9 9">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar9-10.png" alt="Apartamento 9 10">
+            <img class="photo" src="fotos_e_cenas/apar9-11.png" alt="Apartamento 9 11">
+        </div>
+    
+        <div class="tipologia">
+            <p>T1 | 2 Andares | Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar10">
+        <h1>Apartamento 10:</h1>
+    
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar10.png" alt="Apartamento 10 0">
+            <img class="photo" src="fotos_e_cenas/apar10-1.png" alt="Apartamento 10 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar10-2.png" alt="Apartamento 10 2">
+            <img class="photo" src="fotos_e_cenas/apar10-3.png" alt="Apartamento 10 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar10-4.png" alt="Apartamento 10 4">
+            <img class="photo" src="fotos_e_cenas/apar10-5.png" alt="Apartamento 10 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar10-6.png" alt="Apartamento 10 6">
+            <img class="photo" src="fotos_e_cenas/apar10-7.png" alt="Apartamento 10 7">
+        </div>
+    
+        <div class="tipologia">
+            <p>T2 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="apar11-11">
+        <h1>Apartamento 11:</h1>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11.png" alt="Apartamento 11 0">
+            <img class="photo" src="fotos_e_cenas/apar11-1.png" alt="Apartamento 11 1">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-2.png" alt="Apartamento 11 2">
+            <img class="photo" src="fotos_e_cenas/apar11-3.png" alt="Apartamento 11 3">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-4.png" alt="Apartamento 11 4">
+            <img class="photo" src="fotos_e_cenas/apar11-5.png" alt="Apartamento 11 5">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-6.png" alt="Apartamento 11 6">
+            <img class="photo" src="fotos_e_cenas/apar11-7.png" alt="Apartamento 11 7">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-8.png" alt="Apartamento 11 8">
+            <img class="photo" src="fotos_e_cenas/apar11-9.png" alt="Apartamento 11 9">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-10.png" alt="Apartamento 11 10">
+            <img class="photo" src="fotos_e_cenas/apar11-11.png" alt="Apartamento 11 11">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-12.png" alt="Apartamento 11 12">
+            <img class="photo" src="fotos_e_cenas/apar11-13.png" alt="Apartamento 11 13">
+        </div>
+         <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/apar11-14.png" alt="Apartamento 11 14">
+        </div>
+
+<button onclick="topFunction()" id="topBtn" title="Voltar ao Topo">Voltar ao Topo</button>
+
+<script src="script.js"></script>
+
+<script>
+    // Quando o usuário rolar a página, mostre ou oculte o botão conforme necessário
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    var btn = document.getElementById("topBtn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  }
+
+  // Script de Voltar ao Topo
+  function topFunction() {
+    document.body.scrollTop = 0; // Chrome
+    document.documentElement.scrollTop = 0; // Internet Explorer
+  }
+</script>
+
+    <footer>
+        <p>&copy; 2024 Dynasty 8. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

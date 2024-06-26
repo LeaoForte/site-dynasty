@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento para Propriedades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #183c32;
+            color: #fff;
+        }
+
+        header {
+            background-color: #2c5c4d;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .topbar {
+            background-color: #2c5c4d;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar a {
+            display: inline-block;
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .topbar a:hover {
+            color: #ffcc00;
+                    }
+
+        nav {
+            background-color: #397d66; /* Cor fundo barra */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff; /* Cor do texto links */
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #fff; /* Cor fundor */
+            color: #397d66; /* Cor do texto*/
+        }
+
+        a button {
+            background-color: #397d66;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a button:hover {
+            background-color: #fff;
+            color: #397d66; 
+        }
+
+        #categoria,
+        #modelo,
+        #zona,
+        #questionario {
+            background-color: #2c5c4d;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        label {
+            color: #fff;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #397d66;
+        }
+
+        #total-box {
+            background-color: #2c5c4d;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        #preco-total-display {
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #2c5c4d;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="fotos_e_cenas/dynasty8.png" alt="Logotipo Empresa">
+        </a>
+    </header>
+
+    <div class="topbar">
+        <a href="index.html">Início</a>
+        <a href="normas.html">Normas</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="lista.html">Imóveis</a>
+        <a href="orcamento.html">Orçamentos</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <div id="categoria">
+        <label for="categoria-propriedade">Escolha a Categoria:</label>
+        <select id="categoria-propriedade" onchange="atualizarModelos()">
+            <option value="escritorios">Escritórios</option>
+            <option value="apt">Apartamentos</option>
+            <option value="casa">Casas</option>
+            <option value="armaz">Armazéns</option>
+            <option value="other">Outros</option>
+        </select>
+    </div>
+
+    <div id="modelo">
+        <label for="modelo-casa">Escolha o Modelo:</label>
+        <select id="modelo-casa" onchange="atualizarPreco()">
+        </select>
+    </div>
+
+    <div id="zona">
+        <label for="zona-casa">Zona da Propriedade:</label>
+        <select id="zona-casa" name="zona-casa" onchange="atualizarPreco()" required>
+            <option value="zona1">Paleto</option>
+            <option value="zona2">Sandy Shores /Grapeseed</option>
+            <option value="zona3">Vinewood Hills</option>
+            <option value="zona4">DownTown</option>
+            <option value="zona5">Bairro</option>
+            <option value="zona6">Richman</option>
+            <option value="zona7">Litoral</option>
+            <option value="zona8">Vinewood Rockford</option>
+            <option value="zona9">Little Seoul</option>
+            <option value="zona10">Vespucci / Mirror Park</option>
+            <option value="zona11">Zona Industrial</option>
+            <option value="zona12">Roxwood</option>
+        </select>
+    </div>
+
+    <div id="questionario">
+    <label>
+        <input type="checkbox" id="luxoCheckbox" onchange="atualizarPreco()">
+        Zona de Luxo
+    </label>
+    <label>
+        <input type="checkbox" id="isolamentoCheckbox" onchange="atualizarPreco()">
+        Zona Isolada
+    </label>
+    <label>
+        <input type="checkbox" id="garagemCheckbox" onchange="atualizarPreco()">
+        Garagem
+    </label>
+</div>
+
+
+    <div id="total-box">
+        <h2>Total: <span id="preco-total-display">0.00</span></h2>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dynasty 8. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        var precosPorModelo = {
+            "Escritório 1": 35000.00,
+            "Escritório 2": 45000.00,
+            "Escritório 3": 65000.00,
+            "Escritório 4": 135000.00,
+            "Apartamento 1": 150000.00,
+            "Apartamento 2": 150000.00,
+            "Apartamento 3": 175000.00,
+            "Apartamento 4": 150000.00,
+            "Apartamento 5": 170000.00,
+            "Apartamento 6": 130000.00,
+            "Apartamento 7": 130000.00,
+            "Apartamento 8": 130000.00,
+            "Apartamento 9": 130000.00,
+            "Apartamento 10": 130000.00,
+            "Apartamento 11": 180000.00,
+            "Casa 1": 45000.00,
+            "Casa 2": 50000.00,
+            "Casa 3": 40000.00,
+            "Casa 4": 55000.00,
+            "Casa 5": 40000.00,
+            "Casa 6": 75000.00,
+            "Casa 7": 50000.00,
+            "Casa 8": 40000.00,
+            "Casa 9": 45000.00,
+            "Casa 10": 40000.00,
+            "Casa 11": 150000.00,
+            "Casa 12": 250000.00,
+            "Casa 13": 230000.00,
+            "Casa 14": 90000.00,
+            "Casa 15": 150000.00,
+            "Quarto Motel 1": 35000.00,
+            "Quarto Motel 2": 40000.00,
+            "Trailer": 25000.00,
+            "Mansão 1": 250000.00,
+            "Mansão 2": 250000.00,
+            "Mansão 3": 250000.00,
+            "Armazém Médio": 80000.00,
+            "Armazém Grande": 100000.00,
+            "Armazém Pequeno 1": 55000.00,
+            "Armazém Pequeno 2": 60000.00,
+            "Laboratório 1": 100000.00,
+            "Laboratório 2": 110000.00,
+            "Garagem": 100000.00,
+        };
+
+        var percentuaisPorZona = {
+            "Paleto": 200,
+            "Sandy Shores /Grapeseed": 110,
+            "Vinewood Hills": 1200,
+            "DownTown": 600,
+            "Bairro": 100,
+            "Richman": 650,
+            "Litoral": 350,
+            "Vinewood Rockford": 450,
+            "Little Seoul": 225,
+            "Vespucci / Mirror Park": 350,
+            "Zona Industrial": 120,
+            "Roxwood": 210
+        };
+
+        var taxaLuxo = 100.00;
+        var taxaGaragem = 10.00;
+        var taxaIsolamento = 15.00;
+
+        function obterPrecoZona(zona) {
+            return percentuaisPorZona[zona] || 0;
+        }
+
+        function atualizarModelos() {
+            var categoriaSelecionada = document.getElementById("categoria-propriedade").value;
+            var modelos = [];
+
+            switch (categoriaSelecionada) {
+                case "escritorios":
+                    modelos = ["Escritório 1", "Escritório 2", "Escritório 3", "Escritório 4"];
+                    break;
+                case "apt":
+                    modelos = ["Apartamento 1", "Apartamento 2", "Apartamento 3", "Apartamento 4", "Apartamento 5", "Apartamento 6", "Apartamento 7", "Apartamento 8", "Apartamento 9", "Apartamento 10", "Apartamento 11"];
+                    break;
+                case "casa":
+                    modelos = ["Casa 1", "Casa 2", "Casa 3", "Casa 4", "Casa 5", "Casa 6", "Casa 7", "Casa 8", "Casa 9", "Casa 10", "Casa 11", "Casa 12", "Casa 13", "Casa 14", "Casa 15"];
+                    break;
+                case "armaz":
+                    modelos = ["Armazém Médio", "Armazém Grande", "Armazém Pequeno 1", "Armazém Pequeno 2"];
+                    break;
+                case "other":
+                    modelos = ["Quarto Motel 1", "Quarto Motel 2", "Trailer", "Mansão 1", "Mansão 2", "Mansão 3", "Laboratório 1", "Laboratório 2", "Garagem"];
+                    break;
+                default:
+                    modelos = [];
+            }
+var modeloDropdown = document.getElementById("modelo-casa");
+            modeloDropdown.innerHTML = "";
+
+            modelos.forEach(function (modelo) {
+                var option = document.createElement("option");
+                option.value = modelo;
+                option.text = modelo;
+                modeloDropdown.add(option);
+            });
+
+            // Quando se muda o modelo, atualizar o preco
+            atualizarPreco();
+        }
+
+function atualizarPreco() {
+    var modeloSelecionado = document.getElementById("modelo-casa").value;
+    var zonaSelecionada = document.getElementById("zona-casa").value;
+
+    // Preço do imovel
+    var precoBase = precosPorModelo[modeloSelecionado] || 0;
+
+    // Percentagem da zona que se escolhe
+    var percentualZona = obterPrecoZona(zonaSelecionada);
+
+    // Selecionar as condicoes do imovel
+    var isLuxo = document.getElementById("luxoCheckbox").checked;
+    var isIsolamento = document.getElementById("isolamentoCheckbox").checked;
+    var hasGaragem = document.getElementById("garagemCheckbox").checked;
+
+    // Adicionar percentual extra para luxo, isolamento e garagem
+    percentualZona += isLuxo ? 100 : 0;
+    percentualZona += isIsolamento ? 15 : 0;
+
+    // Calcular o preço final com o modelo, zona e taxas adicionais
+    var precoFinal = precoBase + (precoBase * (percentualZona / 100));
+
+    // Adicionar taxas adicionais
+    precoFinal += precoFinal * (hasGaragem ? 0.10 : 0); // 10% da taxa da garagem.
+ 
+    // Símbolo do dólar, preço com as casas decimais + fácil pra ler
+    var precoFormatado = precoFinal.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+    // O preço atualizar no total
+    var precoTotalDisplay = document.getElementById("preco-total-display");
+    precoTotalDisplay.textContent = precoFormatado;
+}
+
+    </script>
+</body>
+
+</html>

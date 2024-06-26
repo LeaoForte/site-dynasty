@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interiores de Casas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #183c32;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2c5c4d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Borda imagem redonda */
+        }
+
+        header h1 {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .topbar {
+            background-color: #183c32;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar a {
+            display: inline-block;
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease; 
+        }
+
+        .topbar a:hover {
+            color: #ffcc00;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #397d66; /* Cor título principal */
+            margin-top: 20px;
+        }
+
+        section {
+            margin: 20px;
+        text-align: center;
+        }
+
+        section h1, section h2 {
+            color: #ffcc00; 
+        }
+
+        section ul,
+        section p {
+            color: #fff; 
+            text-align: center; 
+        }
+
+        .photo-container {
+            text-align: center;
+            display: flex;
+            justify-content: center; /* Centraliza as imagens */
+        }
+
+        .photo-container img {
+            width: 45%; /* Largura de cada foto */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra à imagem */
+            border-radius: 8px;
+            margin: 0 1%;
+        }
+
+        footer {
+            background-color: #2c5c4d; /* Cor de fundo verde mais escuro */
+            color: #fff; /* Cor do texto */
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto; /* Empurre o rodapé para a parte inferior */
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao rodapé */
+        }
+        
+       .tipologia {
+            background-color: #2c5c4d;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        #topBtn {
+        display: none;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 16px;
+        border: none;
+        outline: none;
+        background-color: #ffcc00;
+        color: green;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        }
+
+    .mansao {
+    display: none;
+    }
+
+    .mansao-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.mansao-list {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.show-list {
+    display: block;
+}
+    
+    /*estilos mansões */
+    .mansao-container {
+    text-align: center;
+    margin-top: 20px;
+    }
+    
+    .mansao-1 {
+    background-color: #4CAF50;
+    }
+    
+    .mansao-2 {
+    background-color: #2196F3;
+    }
+    
+    .mansao-3 {
+    background-color: #f44336;
+    }
+    
+    
+    .dropdown-btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    }
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+    
+    .dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    }
+    
+    .dropdown-content button:hover {
+    background-color: #ddd;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="fotos_e_cenas/dynasty8.png" alt="Logotipo Empresa">
+        </a>
+        <h1>Interiores das Casas</h1>
+    </header>
+
+    <div class="topbar">
+        <a href="index.html">Início</a>
+        <a href="normas.html">Normas</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="lista.html">Imóveis</a>
+        <a href="orcamento.html">Orçamentos</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="login.html">Login</a>
+    </div>
+
+
+
+
+<section id="motel-1">
+        <h1>Quarto Motel 1: </h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/motel1.png" alt="Motel 1">
+        </div>
+
+        <div class="tipologia">
+            <p>T0 | 1 Andar | Mobilado | Pequena Dimensão</p>
+        </div>
+    </section>
+
+ <section id="motel-2">
+        <h2>Quarto Motel 2:</h2>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/pou1.png" alt="Casa2 1">
+            <img class="photo" src="fotos_e_cenas/pou2.png" alt="Casa2 2">
+        </div>
+
+        <div class="tipologia">
+            <p>T0 | 1 Andar | Mobilado | Pequena Dimensão</p>
+        </div>
+        
+    </section>
+    
+<section id="casa-1">
+        <h2>Casa 1:</h2>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/casa1.png" alt="Casa1 1">
+            <img class="photo" src="fotos_e_cenas/casa12.png" alt="Casa1 2">
+        </div>
+        
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/casa13.png" alt="Casa1 3">
+            <img class="photo" src="fotos_e_cenas/casa14.png" alt="Casa1 4">
+        </div>
+        
+        <div class="tipologia">
+            <p> T1 | 1 Andar | Não Mobilado | Pequena Dimensão</p>
+        </div>
+        
+    </section>
+
+<section id="casa-2">
+        <h1>Casa 2:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa2.png" alt="Casa2 1">
+            <img src="fotos_e_cenas/casa21.png" alt="Casa2 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa22.png" alt="Casa2 3">
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 1 Andar | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-3">
+        <h1>Casa 3:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa3.png" alt="Casa3 1">
+            <img src="fotos_e_cenas/casa31.png" alt="Casa3 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa32.png" alt="Casa3 3">
+        </div>
+
+        <div class="tipologia">
+            <p>T0 | 1 Andar | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-4">
+        <h1>Casa 4:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa4.png" alt="Casa4 1">
+            <img src="fotos_e_cenas/casa41.png" alt="Casa4 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa42.png" alt="Casa4 3">
+            <img src="fotos_e_cenas/casa43.png" alt="Casa4 4">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa44.png" alt="Casa4 5">
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 2 Andares | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+
+<section id="casa-5">
+        <h1>Casa 5:</h1>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/apt1.png" alt="Casa5 1">
+            <img src="fotos_e_cenas/apt2.png" alt="Casa5 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/apt3.png" alt="Casa5 3">
+        </div>
+
+        <div class="tipologia">
+            <p>T1 | 1 Andar | Não Mobilado | Pequena Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-6">
+        <h1>Casa 6:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa6.png" alt="Casa6 1">
+            <img src="fotos_e_cenas/casa61.png" alt="Casa6 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa62.png" alt="Casa6 3">
+            <img src="fotos_e_cenas/casa63.png" alt="Casa6 4">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa64.png" alt="Casa6 5">
+            <img src="fotos_e_cenas/casa65.png" alt="Casa6 5">
+        </div>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa66.png" alt="Casa6 6">
+
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 1 Andar | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-7">
+        <h1>Casa 7:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa7.png" alt="Casa7 1">
+            <img src="fotos_e_cenas/casa71.png" alt="Casa7 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa72.png" alt="Casa7 3">
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 1 Andar | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+
+    <section id="casa-8">
+        <h1>Casa 8:</h1>
+    
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa8.png" alt="Casa8 1">
+            <img src="fotos_e_cenas/casa81.png" alt="Casa8 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa82.png" alt="Casa8 3">
+        </div>
+    
+        <div class="tipologia">
+            <p>T1 | 1 Andar | Não Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-9">
+        <h1>Casa 9:</h1>
+    
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa9.png" alt="Casa9 1">
+            <img src="fotos_e_cenas/casa91.png" alt="Casa9 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa92.png" alt="Casa9 3">
+            <img src="fotos_e_cenas/casa93.png" alt="Casa9 4">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa94.png" alt="Casa9 5">
+            <img src="fotos_e_cenas/casa95.png" alt="Casa9 6">
+        </div>
+    
+        <div class="tipologia">
+            <p>T1 | 1 Andar | Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-10">
+        <h1>Casa 10:</h1>
+    
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa10.png" alt="Casa10 1">
+            <img src="fotos_e_cenas/casa101.png" alt="Casa10 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa102.png" alt="Casa10 3">
+        </div>
+    
+        <div class="tipologia">
+            <p>T0 | 1 Andar | Não Mobilado | Pequena Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-11">
+        <h1>Casa 11:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa11.png" alt="Casa11 1">
+            <img src="fotos_e_cenas/casa111.png" alt="Casa11 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa112.png" alt="Casa11 3">
+            <img src="fotos_e_cenas/casa113.png" alt="Casa11 4">
+        </div>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa114.png" alt="Casa11 5">
+        </div>
+
+        <div class="tipologia">
+            <p>T2 | 1 Andar | Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-12">
+        <h1>Casa 12:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa012.png" alt="Casa12 1">
+            <img src="fotos_e_cenas/casa121.png" alt="Casa12 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa122.png" alt="Casa12 3">
+            <img src="fotos_e_cenas/casa123.png" alt="Casa12 4">
+        </div>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa124.png" alt="Casa12 5">
+            <img src="fotos_e_cenas/casa125.png" alt="Casa12 6">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa126.png" alt="Casa12 7">
+            <img src="fotos_e_cenas/casa127.png" alt="Casa12 8">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa128.png" alt="Casa12 9">
+            <img src="fotos_e_cenas/casa129.png" alt="Casa12 10">
+        </div>
+
+        <div class="tipologia">
+            <p>T6 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+<section id="casa-13">
+        <h1>Casa 13:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa013.png" alt="Casa13 1">
+            <img src="fotos_e_cenas/casa131.png" alt="Casa13 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa132.png" alt="Casa13 3">
+            <img src="fotos_e_cenas/casa133.png" alt="Casa13 4">
+        </div>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa134.png" alt="Casa13 5">
+            <img src="fotos_e_cenas/casa135.png" alt="Casa13 6">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa136.png" alt="Casa13 7">
+        </div>
+        
+
+        <div class="tipologia">
+            <p>T3 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="casa-14">
+        <h1>Casa 14:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa014.png" alt="Casa14 1">
+            <img src="fotos_e_cenas/casa141.png" alt="Casa14 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa142.png" alt="Casa14 3">
+        </div>
+        <div class="tipologia">
+            <p>T1 | 1 Andar | Não Mobilado | Interior Aberto</p>
+        </div>
+    </section>
+
+<section id="casa-15">
+        <h1>Casa 15:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa15.png" alt="Casa15 1">
+            <img src="fotos_e_cenas/casa151.png" alt="Casa15 2">
+        </div>
+         <div class="photo-container">
+            <img src="fotos_e_cenas/casa152.png" alt="Casa15 3">
+            <img src="fotos_e_cenas/casa153.png" alt="Casa15 4">
+        </div>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa154.png" alt="Casa15 5">
+            <img src="fotos_e_cenas/casa155.png" alt="Casa15 6">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/casa156.png" alt="Casa15 7">
+        </div>
+        
+
+        <div class="tipologia">
+            <p>T3 | 2 Andares | Não Mobilado | Grande Dimensão</p>
+        </div>
+    </section>
+    <h2> Mansões: </h2>
+
+<div class="mansao-container">
+    <button onclick="toggleDropdown()" class="dropdown-btn">Selecionar Mansão</button>
+    <div id="mansaoDropdown" class="dropdown-content">
+        <button onclick="mostrarMansao(1)" class="mansao-1">Mansão 1 (Amarelo) </button>
+        <button onclick="mostrarMansao(2)" class="mansao-2">Mansão 2 (Preto) </button>
+        <button onclick="mostrarMansao(3)" class="mansao-3">Mansão 3 (Castanho) </button>
+    </div>
+</div>
+    
+    <!-- primeira mansão -->
+    <section id="mansao-1" class="mansao">
+        <h1>Mansão 1:</h1>
+    
+        <div class="photo-container">
+            <img src="fotos_e_cenas/mansao1.png" alt="Mansao1 1">
+            <img src="fotos_e_cenas/mansao12.png" alt="Mansao1 2">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/mansao13.png" alt="Mansao1 3">
+            <img src="fotos_e_cenas/mansao14.png" alt="Mansao1 4">
+        </div>
+        
+        <div class="photo-container">
+            <img src="fotos_e_cenas/mansao15.png" alt="Mansao1 5">
+            <img src="fotos_e_cenas/mansao110.png" alt="Mansao1 6">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/mansao16.png" alt="Mansao1 7">
+            <img src="fotos_e_cenas/mansao17.png" alt="Mansao1 8">
+        </div>
+        <div class="photo-container">
+            <img src="fotos_e_cenas/mansao18.png" alt="Mansao1 9">
+            <img src="fotos_e_cenas/mansao19.png" alt="Mansao1 10">
+        </div>
+    
+        <div class="tipologia">
+            <p>T3 | 3 Andares | Não Mobilado | Grande Dimensão </p>
+        </div>
+    </section>
+    
+    <!-- segunda mansão -->
+    <section id="mansao-2" class="mansao">
+        <h1>Mansão 2:</h1>
+    
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao2.png" alt="Mansao2 1">
+        <img src="fotos_e_cenas/mansao21.png" alt="Mansao2 2">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao22.png" alt="Mansao2 3">
+        <img src="fotos_e_cenas/mansao23.png" alt="Mansao2 4">
+    </div>
+    
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao24.png" alt="Mansao2 5">
+        <img src="fotos_e_cenas/mansao25.png" alt="Mansao2 6">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao26.png" alt="Mansao2 7">
+        <img src="fotos_e_cenas/mansao27.png" alt="Mansao2 8">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao28.png" alt="Mansao2 9">
+        <img src="fotos_e_cenas/mansao29.png" alt="Mansao2 10">
+    </div>
+    
+        <div class="tipologia">
+            <p>T3 | 3 Andares | Não Mobilado | Grande Dimensão </p>
+        </div>
+    </section>
+    
+    <!-- terceira mansão -->
+    <section id="mansao-3" class="mansao">
+        <h1>Mansão 3:</h1>
+    
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao3.png" alt="Mansao3 1">
+        <img src="fotos_e_cenas/mansao31.png" alt="Mansao3 2">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao32.png" alt="Mansao3 3">
+        <img src="fotos_e_cenas/mansao33.png" alt="Mansao3 4">
+    </div>
+    
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao34.png" alt="Mansao3 5">
+        <img src="fotos_e_cenas/mansao35.png" alt="Mansao3 6">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao36.png" alt="Mansao3 7">
+        <img src="fotos_e_cenas/mansao37.png" alt="Mansao3 8">
+    </div>
+    <div class="photo-container">
+        <img src="fotos_e_cenas/mansao38.png" alt="Mansao3 9">
+        <img src="fotos_e_cenas/mansao39.png" alt="Mansao3 10">
+    </div>
+
+        <!-- terceira mansão -->
+    
+        <div class="tipologia">
+            <p>T3 | 3 Andares | Não Mobilado | Grande Dimensão </p>
+        </div>
+    </section>
+
+<button onclick="topFunction()" id="topBtn" title="Voltar ao Topo">Voltar ao Topo</button>
+
+<script src="script.js"></script>
+
+<script>
+    // Botão de voltar ao topo desaparecer no inicio da pagina
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    var btn = document.getElementById("topBtn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  }
+
+  // Botao da scroll para topo
+  function topFunction() {
+    document.body.scrollTop = 0; // Chrome
+    document.documentElement.scrollTop = 0; //  Internet Explorer
+  }
+</script>
+
+<script>
+    function toggleDropdown() {
+            var dropdownContent = document.getElementById("mansaoDropdown");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+
+        function mostrarMansao(numero) {
+            // Esconde o resto das mansoes
+            document.querySelectorAll('.mansao').forEach(function (mansao) {
+                mansao.style.display = 'none';
+            });
+
+            // Mostra a mansão selecionada
+            document.getElementById('mansao-' + numero).style.display = 'block';
+
+            // Fecha o dropdown dps da seleção
+            document.getElementById("mansaoDropdown").style.display = "none";
+        }
+</script>
+
+    <footer>
+        <p>&copy; 2024 Dynasty 8. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

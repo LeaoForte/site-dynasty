@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interiores de Escritórios</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #183c32;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2c5c4d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            color: #fff;
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .topbar {
+            background-color: #183c32;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar a {
+            display: inline-block;
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .topbar a:hover {
+            color: #ffcc00;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #397d66;
+            margin-top: 20px;
+        }
+
+        section {
+            margin: 20px;
+            text-align: center; /* Adiciona centralização ao conteúdo da seção */
+        }
+
+        section h1, section h2 {
+            color: #ffcc00;
+        }
+
+        section ul,
+        section p {
+            color: #fff;
+            text-align: center;
+        }
+
+        .photo-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .photo-container img {
+            width: 100%; 
+            max-width: 600px; 
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 0 1%;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        footer {
+            background-color: #2c5c4d;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+                .tipologia {
+    background-color: #2c5c4d;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px auto;
+    max-width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="fotos_e_cenas/dynasty8.png" alt="Logotipo Empresa">
+        </a>
+        <h1>Interiores dos Escritórios</h1>
+    </header>
+
+    <div class="topbar">
+        <a href="index.html">Início</a>
+        <a href="normas.html">Normas</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="lista.html">Imóveis</a>
+        <a href="orcamento.html">Orçamentos</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <section id="escritório-1">
+        <h1>Escritório 1:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/office1.png" alt="Escritório 1" onclick="openModal('fotos_e_cenas/office1.png')">
+        </div>
+        
+        <div class="tipologia">
+            <p>1 Andar | Não Mobilado | Pequena Dimensão</p>
+        </div>
+        
+    </section>
+
+    <section id="escritorio-2">
+        <h2>Escritório 2:</h2>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/office2.png" alt="Escritório 2" onclick="openModal('fotos_e_cenas/office2.png')">
+            <img class="photo" src="fotos_e_cenas/office21.png" alt="Escritório 2" onclick="openModal('fotos_e_cenas/office21.png')">
+            <img class="photo" src="fotos_e_cenas/office22.png" alt="Escritório 2" onclick="openModal('fotos_e_cenas/office22.png')">
+        </div>
+
+<div class="tipologia">
+            <p>1 Andar | Mobilado | Pequena Dimensão</p>
+        </div>
+        
+    </section>
+
+    <section id="escritório-3">
+        <h1>Escritório 3:</h1>
+
+        <div class="photo-container">
+            <img src="fotos_e_cenas/office3.png" alt="Escritório 3" onclick="openModal('fotos_e_cenas/office3.png')">
+        </div>
+        
+        <div class="tipologia">
+            <p>1 Andar | Mobilado | Pequena Dimensão</p>
+        </div>
+        
+    </section>
+
+    <section id="escritorio-4">
+        <h2>Escritório 4:</h2>
+
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/office4.png" alt="Escritório 4" onclick="openModal('fotos_e_cenas/office4.png')">
+            <img class="photo" src="fotos_e_cenas/office41.png" alt="Escritório 4" onclick="openModal('fotos_e_cenas/office41.png')">
+            <img class="photo" src="fotos_e_cenas/office42.png" alt="Escritório 4" onclick="openModal('fotos_e_cenas/office42.png')">
+            <img class="photo" src="fotos_e_cenas/office43.png" alt="Escritório 4" onclick="openModal('fotos_e_cenas/office43.png')">
+            <img class="photo" src="fotos_e_cenas/office44.png" alt="Escritório 4" onclick="openModal('fotos_e_cenas/office44.png')">
+        </div>
+        
+        <div class="tipologia">
+            <p>1 Andar | Mobilado | Grande Dimensão</p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dynasty 8. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Imagem em Zoom">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imagePath) {
+            document.getElementById('modal-image').src = imagePath;
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

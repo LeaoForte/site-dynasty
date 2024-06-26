@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros Imóveis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #183c32;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2c5c4d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .topbar {
+            background-color: #2c5c4d;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar a {
+            display: inline-block;
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .topbar a:hover {
+            color: #ffcc00;
+        }
+
+        h1 {
+            text-align: center;
+            color: #397d66;
+            margin-top: 20px;
+        }
+
+        section {
+            margin: 20px;
+            text-align: center;
+        }
+
+        section h1 {
+            color: #ffcc00;
+        }
+
+        section h2,
+        section ul,
+        section p {
+            color: #fff;
+            text-align: center;
+        }
+
+        .photo {
+            max-width: 40%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Adiciona sombra à imagem */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .photo-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background-color: #2c5c4d;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tipologia {
+            background-color: #2c5c4d;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px auto;
+            max-width: 100%;
+        }
+
+        #farm .photo-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #farm .photo {
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        #trailer .photo-container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        
+        #trailer .photo {
+        width: 80%;
+        margin: 1 0%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="fotos_e_cenas/dynasty8.png" alt="Logotipo Empresa">
+        </a>
+    </header>
+
+    <div class="topbar">
+        <a href="index.html">Início</a>
+        <a href="normas.html">Normas</a>
+        <a href="comunicados.html">Comunicados</a>
+        <a href="lista.html">Imóveis</a>
+        <a href="orcamento.html">Orçamentos</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <h1>Outros Estilos de Imóveis:</h1>
+
+    <section id="lab1">
+        <h1>Laboratório 1:</h1>
+        <img class="photo" src="fotos_e_cenas/lab1.png" alt="Laboratório 1">
+        <div class="tipologia">
+            <p>1 Andar | Pouco Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="lab2">
+        <h1>Laboratório 2:</h1>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/lab2.png" alt="Laboratório 2">
+            <img class="photo" src="fotos_e_cenas/lab3.png" alt="Laboratório 2">
+        </div>
+        <div class="tipologia">
+            <p>1 Andar | Pouco Mobilado | Média Dimensão</p>
+        </div>
+    </section>
+
+    <section id="farm">
+        <h1>Quinta:</h1>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/farm1.png" alt="Quinta">
+            <img class="photo" src="fotos_e_cenas/farm3.png" alt="Quinta">
+            <img class="photo" src="fotos_e_cenas/farm4.png" alt="Quinta">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/farm5.png" alt="Quinta">
+            <img class="photo" src="fotos_e_cenas/farm6.png" alt="Quinta">
+            <img class="photo" src="fotos_e_cenas/farm7.png" alt="Quinta">
+        </div>
+        <div class="tipologia">
+            <p>1 Andar | Grande Dimensão</p>
+        </div>
+    </section>
+
+    <section id="trailer">
+        <h1>Trailer:</h1>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/trailer1.png" alt="trailer 1">
+            <img class="photo" src="fotos_e_cenas/trailer2.png" alt="Trailer 2">
+        </div>
+        <div class="photo-container">
+            <img class="photo" src="fotos_e_cenas/trailer3.png" alt="trailer 3">
+            <img class="photo" src="fotos_e_cenas/trailer4.png" alt="Trailer 4">
+        </div>
+        <div class="tipologia">
+            <p>T0 | 1 Andar | Pouco Mobilado | Pequena Dimensão</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dynasty 8. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
